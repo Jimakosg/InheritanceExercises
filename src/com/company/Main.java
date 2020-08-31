@@ -4,20 +4,43 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String args[])
-    {
-        int number, reverse = 0;
-        Scanner in = new Scanner(System.in);
-        number = in.nextInt();
+    public static void main(String args[]) {
 
-        while(number != 0){
-            reverse *= 10;
-            reverse += number % 10;
-            number /= 10;
+        Stack<Integer> stack = new Stack<>();
+
+        pushStack(stack);
+
+
+        peekStack(stack);
+
+        popStack(stack);
+
+    }
+
+    public static void peekStack(Stack<Integer> stack){
+
+        int element = (int) stack.peek();
+        System.out.println(element);
+    }
+
+    public static void pushStack(Stack<Integer> stack){
+
+        for (int i = 0; i < 15; i++){
+            int j = stack.push(i);
+
         }
 
-        System.out.println(reverse);
     }
+
+    public static void popStack(Stack<Integer> stack){
+
+        for (int i = 0; i < 15; i++){
+            int j = stack.pop();
+            System.out.println(j);
+        }
+
+    }
+
 
 }
 
