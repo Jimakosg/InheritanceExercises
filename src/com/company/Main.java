@@ -6,27 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
-        int number = 3;
+        double number = 1.6666;
+        //The -1 exists because the system counts the "." as a digit but the exercise only asks for Digits
+        long length = String.valueOf(number).length() - 1;
 
-        System.out.println(calculate(number));
-
-
+        System.out.println(number);
+        System.out.println(length);
     }
 
-    static double calculate(int number)
-    {
-        double sum = 0;
-        int factorial = 1;
-
-        for (int i = 1; i <= number; i++)
-        {
-
-            factorial *= i;
-
-            sum += 1.0/factorial;
-        }
-        return sum;
-    }
 
 }
 
