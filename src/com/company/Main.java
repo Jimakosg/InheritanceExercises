@@ -4,43 +4,27 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
-        Stack<Integer> stack = new Stack<>();
-
-        pushStack(stack);
-
-
-        peekStack(stack);
-
-        popStack(stack);
+        System.out.println(reverse("Kalhmera Kalhspera"));
 
     }
 
-    public static void peekStack(Stack<Integer> stack){
+    public static String reverse(String str) {
+        char[] charArr = str.toCharArray();
+        int size = charArr.length;
+        Stack stack = new Stack();
 
-        int element = (int) stack.peek();
-        System.out.println(element);
-    }
-
-    public static void pushStack(Stack<Integer> stack){
-
-        for (int i = 0; i < 15; i++){
-            int j = stack.push(i);
-
+        for(int i = 0; i < size; ++i) {
+            stack.push(charArr[i]);
         }
 
-    }
-
-    public static void popStack(Stack<Integer> stack){
-
-        for (int i = 0; i < 15; i++){
-            int j = stack.pop();
-            System.out.println(j);
+        for(int i = 0; i < size; ++i) {
+            charArr[i] = (char) stack.pop();
         }
 
+        return String.valueOf(charArr);
     }
-
 
 }
 
