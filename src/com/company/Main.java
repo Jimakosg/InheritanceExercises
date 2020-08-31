@@ -2,15 +2,25 @@ package com.company;
 
 import java.util.Stack;
 
-public class Main {
+class Main {
+        public static void main(String[] args) {
+            // write your code here
 
-    public static void main(String[] args) {
-        // write your code here
-        int max = Integer.MAX_VALUE;
+            int number = 8; //the factorial number that we want to calculate, example: 8
 
-        System.out.println(max);
+            int result = calculate(number);
+            System.out.println("The factorial of " + number + " is: " + result);
+
+        }
+
+        public static int calculate(int number) {
+
+            if (number >= 1) {
+
+                return number * calculate(number - 1);
+
+            } else return 1;
+
+        }
 
     }
-
-}
-
