@@ -4,23 +4,20 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-        int x = 10;
-        Set set = new HashSet();
+    public static void main(String args[])
+    {
+        int number, reverse = 0;
+        Scanner in = new Scanner(System.in);
+        number = in.nextInt();
 
-        for (int i = 0; i < x; i++){
-            //The set check whether there are duplicate values and removes them automatically.
-            //The set.add(5); is removed since the number 5 already exists in the list.
-            set.add(i);
-            set.add(5);
-
+        while(number != 0){
+            reverse *= 10;
+            reverse += number % 10;
+            number /= 10;
         }
-        System.out.println(set);
+
+        System.out.println(reverse);
     }
-
-
-
-
 
 }
 
