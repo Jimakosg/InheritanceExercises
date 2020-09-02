@@ -9,5 +9,8 @@
         <module name="InheritanceExercise2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="InheritanceExercise2" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

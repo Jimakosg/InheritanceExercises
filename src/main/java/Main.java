@@ -12,7 +12,13 @@ public class Main {
         simple.sell(x1);
         System.out.println(simple.getRevenue());
 
-
+        IStore invStore= new InventoryRetailStore();
+        invStore.buy(x1);
+        invStore.buy(x4);
+        invStore.sell(x1);
+        System.out.println(invStore.getRevenue());
+        invStore.sell(x2);
+        invStore.getInventory();
 
     }
 

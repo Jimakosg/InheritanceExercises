@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Store implements IStore {
 
    private String name;
@@ -43,5 +45,10 @@ public class Store implements IStore {
 
     public double getRevenue() {
         return 0;
+    }
+
+    @Override
+    public List<Product> getInventory() {
+        return null;
     }
 }
